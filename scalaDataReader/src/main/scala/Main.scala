@@ -15,10 +15,11 @@ object Main extends App{
     .appName("beeskito")
     .getOrCreate()
 
-  val moskitos = spark.read.format("json")
+  val moskitos = spark.read.format("csv") //"json")
     .option("header", "true")
     .option("inferSchema", "true")
-    .load("/home/romain/IdeaProjects/Prototype/src/main/scala/data.json")
+    .load("/home/romain/HDFakeSystem/*.csv")
+    //.load("/home/romain/IdeaProjects/Prototype/src/main/scala/data.json")
 
   moskitos.show(5)
 
