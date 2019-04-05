@@ -15,7 +15,7 @@ object Main extends App {
 
 
   val conf = new SparkConf().setAppName("kafkAlert").setMaster("local[*]")
-  val ssc = new StreamingContext(conf, Minutes(10)) //Run every 10mn
+  val ssc = new StreamingContext(conf, Hours(24)) //Runs every 24h
   val spark = SparkSession.builder().appName("Spark SQL").getOrCreate()
   import spark.implicits._
   val kafkaParams = Map[String, Object](
