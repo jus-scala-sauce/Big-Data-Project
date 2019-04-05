@@ -22,7 +22,7 @@ object Main extends App {
     "bootstrap.servers" -> "localhost:9092",
     "key.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
     "value.deserializer" -> "org.apache.kafka.common.serialization.StringDeserializer",
-    "group.id" -> "kafkAlert",
+    "group.id" -> "kafkAdoop",
     "auto.offset.reset" -> "latest",
     "enable.auto.commit" -> (false: java.lang.Boolean)
   )
